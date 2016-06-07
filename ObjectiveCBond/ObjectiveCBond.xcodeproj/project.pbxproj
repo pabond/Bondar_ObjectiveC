@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D7E0D9D1D05B5F000620461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E0D9C1D05B5F000620461 /* main.m */; };
+		2D7E0DAF1D06D4F900620461 /* BPVCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E0DAE1D06D4F900620461 /* BPVCreature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		2D7E0D991D05B5F000620461 /* ObjectiveCBond */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectiveCBond; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7E0D9C1D05B5F000620461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D7E0DAD1D06D4F900620461 /* BPVCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPVCreature.h; sourceTree = "<group>"; };
+		2D7E0DAE1D06D4F900620461 /* BPVCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPVCreature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,19 @@
 		2D7E0D9B1D05B5F000620461 /* ObjectiveCBond */ = {
 			isa = PBXGroup;
 			children = (
+				2D7E0DA61D05C11300620461 /* Sources */,
 				2D7E0D9C1D05B5F000620461 /* main.m */,
 			);
 			path = ObjectiveCBond;
+			sourceTree = "<group>";
+		};
+		2D7E0DA61D05C11300620461 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E0DAD1D06D4F900620461 /* BPVCreature.h */,
+				2D7E0DAE1D06D4F900620461 /* BPVCreature.m */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7E0D9D1D05B5F000620461 /* main.m in Sources */,
+				2D7E0DAF1D06D4F900620461 /* BPVCreature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +223,8 @@
 		2D7E0DA11D05B5F000620461 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +232,8 @@
 		2D7E0DA21D05B5F000620461 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
