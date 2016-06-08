@@ -18,22 +18,11 @@ typedef enum {
 
 @interface BPVCreature : NSObject
 
-@property (nonatomic, copy)     NSString  *name;
-@property (nonatomic, readonly) NSArray   *children;
-
-@property (nonatomic, assign, readwrite) NSInteger age;
-@property (nonatomic, assign, readwrite) float     waight;
-
-@property (nonatomic, assign, readwrite) BPVCreatureGenderType gender;
-
-- (void)fight;
-- (BPVCreature *)giveBirthToChildWithName: (NSString *)name;
-- (BPVCreature *)giveBirthToChild;
-
-- (BPVCreature *)addChild: (BPVCreature *)child;
-- (void)removeChild: (BPVCreature *)child;
-- (NSArray *)children;
+@property (nonatomic, copy)                 NSString  *name;
+@property (nonatomic, assign, readwrite)    NSInteger age;
+@property (nonatomic, assign, readwrite)    float     waight;
 
 - (void)sayHi;
+- (void)performGenderSpecificOperation;
 
 @end
