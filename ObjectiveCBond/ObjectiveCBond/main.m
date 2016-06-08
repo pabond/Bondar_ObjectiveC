@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BPVCreature.h"
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-       
+        BPVCreature *creature1 = [[[BPVCreature alloc] init] autorelease];
+    
     }
     return 0;
 }
