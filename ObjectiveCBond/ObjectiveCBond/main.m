@@ -14,8 +14,18 @@
 #import "BPVCreatureMale.h"
 #import "BPVCreatureFemale.h"
 
+#include "BPVAdminBuilding.h"
+#include "BPVCarWashBuilding.h"
+
+#include "BPVWasher.h"
+#include "BPVDirector.h"
+#include "BPVAccountant.h"
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        BPVCarWashBuilding *carWashBuilding = [BPVCarWashBuilding object];
+        BPVAdminBuilding *adminBuilding = [BPVAdminBuilding object];
+        
         
     }
     

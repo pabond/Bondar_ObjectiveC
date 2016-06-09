@@ -10,6 +10,11 @@
 
 #import "NSObject+BPVCategory.h"
 
+typedef enum {
+    BPVBuildingTypeAdmin,
+    BPVBuildingTypeCarWash
+} BPVBuildingType;
+
 @interface BPVBuilding : NSObject
 
 @property (nonatomic, readonly) NSArray *rooms;
@@ -17,5 +22,7 @@
 - (id)addRoom;
 
 - (void)addRoomToCollection: (id)room;
+
+- (id)addBuilding: (BPVBuildingType)type;
 
 @end

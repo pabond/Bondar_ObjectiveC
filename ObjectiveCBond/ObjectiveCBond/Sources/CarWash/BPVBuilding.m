@@ -8,6 +8,9 @@
 
 #import "BPVBuilding.h"
 
+#import "BPVCarWashBuilding.m"
+#import "BPVAdminBuilding.h"
+
 @interface BPVBuilding ()
 
 @property (nonatomic, retain) NSMutableArray *mutableRooms;
@@ -29,6 +32,18 @@
     [self setMutableRooms: nil];
     
     [super dealloc];
+}
+
+- (id)addBuilding: (BPVBuildingType)type {
+    id result = nil;
+    
+    if (type == BPVBuildingTypeAdmin) {
+        result = [BPVAdminBuilding object];
+    } else if (type == BPVBuildingTypeCarWash) {
+        result = [BPVCarWashBuilding object];
+    }
+    
+    return result;
 }
 
 - (void)addRoomToCollection: (id)room {
