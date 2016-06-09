@@ -10,4 +10,11 @@
 
 @implementation BPVCarWashBuilding
 
+- (BPVCarWashBuilding *)addRoom {
+    BPVCarWashBuilding *room = [BPVCarWashBuilding object];
+    [self addRoomToCollection: room];
+    
+    return room;
+}
+
 @end

@@ -10,4 +10,11 @@
 
 @implementation BPVAdminBuilding
 
+- (BPVAdminBuilding *)addRoom {
+    BPVAdminBuilding *room = [BPVAdminBuilding object];
+    [self addRoomToCollection: room];
+    
+    return room;
+}
+
 @end

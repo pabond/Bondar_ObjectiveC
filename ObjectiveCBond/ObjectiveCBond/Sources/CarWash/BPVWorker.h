@@ -10,4 +10,7 @@
 
 @interface BPVWorker : BPVRoom
 
+@property (nonatomic, assign) NSUInteger experienceYears;
+@property (nonatomic, assign) NSUInteger curentMoney;
+
 @end

@@ -7,7 +7,12 @@
 //
 
 #import "BPVWorker.h"
+#import "BPVWorckersProtocol.h"
 
-@interface BPVAccountant : BPVWorker
+@interface BPVAccountant : BPVWorker <BPVWorckersProtocol>
+
+@property (nonatomic, assign) NSUInteger money;
+
+- (NSUInteger)moneyCount;
 
 @end

@@ -8,6 +8,11 @@
 
 #import "BPVWorker.h"
 
-@interface BPVWasher : BPVWorker
+#import "BPVWorckersProtocol.h"
+
+@interface BPVWasher : BPVWorker <BPVWorckersProtocol>
+
+
+- (void)washCar;
 
 @end

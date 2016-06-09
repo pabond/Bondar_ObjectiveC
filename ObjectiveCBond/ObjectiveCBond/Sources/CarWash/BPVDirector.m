@@ -10,4 +10,15 @@
 
 @implementation BPVDirector
 
+- (id)addWorker {
+    BPVDirector *worker = [BPVDirector object];
+    [self addWorkerToCollection: worker];
+    
+    return worker;
+}
+
+- (void)earnMoney {
+    NSLog(@"I'm earning money.");
+}
+
 @end

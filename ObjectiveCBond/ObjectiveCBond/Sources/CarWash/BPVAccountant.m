@@ -10,4 +10,17 @@
 
 @implementation BPVAccountant
 
+- (id)addWorker {
+    BPVAccountant *worker = [BPVAccountant object];
+    [self addWorkerToCollection: worker];
+    
+    return worker;
+}
+
+- (NSUInteger)moneyCount {
+    NSUInteger money = self.money;
+    NSLog(@"I'm accountant, now is in cashbox %lu USD", (unsigned long)money);
+    return money;
+}
+
 @end

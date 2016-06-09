@@ -10,4 +10,15 @@
 
 @implementation BPVWasher
 
+- (id)addWorker {
+    BPVWasher *worker = [BPVWasher object];
+    [self addWorkerToCollection: worker];
+    
+    return worker;
+}
+
+- (void)washCar {
+    NSLog(@"I'm washing car");
+}
+
 @end

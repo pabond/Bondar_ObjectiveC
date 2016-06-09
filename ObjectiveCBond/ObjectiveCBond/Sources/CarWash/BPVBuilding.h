@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    BPVRoomCarWash,
-    BPVRoomAdmin
-} BPVRoomType;
+#import "NSObject+BPVCategory.h"
 
 @interface BPVBuilding : NSObject
 
-- (id)addRoom: (BPVRoomType)type withWorkers: (uint8_t)count;
+@property (nonatomic, readonly) NSArray *rooms;
+
+- (id)addRoom;
+
+- (void)addRoomToCollection: (id)room;
 
 @end

@@ -10,5 +10,4 @@
 
 @interface BPVCarWashBuilding : BPVBuilding
 
-
 @end

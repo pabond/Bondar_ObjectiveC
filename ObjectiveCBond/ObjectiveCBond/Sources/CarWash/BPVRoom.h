@@ -16,6 +16,10 @@ typedef enum {
 
 @interface BPVRoom : BPVBuilding
 
-- (id)addWorker: (BPVWorkerType)type;
+@property (nonatomic, readonly) NSArray *workers;
+
+- (void)addWorkerToCollection: (id)worker;
+
+- (id)addWorker;
 
 @end
