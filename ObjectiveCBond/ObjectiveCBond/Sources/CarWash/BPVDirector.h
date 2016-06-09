@@ -8,9 +8,7 @@
 
 #import "BPVWorker.h"
 
-#import "BPVWorckersProtocol.h"
-
-@interface BPVDirector : BPVWorker <BPVWorckersProtocol>
+@interface BPVDirector : BPVWorker
 
 @property (nonatomic, assign) NSUInteger earnedMoney;
 

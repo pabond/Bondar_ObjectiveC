@@ -7,9 +7,8 @@
 //
 
 #import "BPVWorker.h"
-#import "BPVWorckersProtocol.h"
 
-@interface BPVAccountant : BPVWorker <BPVWorckersProtocol>
+@interface BPVAccountant : BPVWorker
 
 @property (nonatomic, assign) NSUInteger money;
 
