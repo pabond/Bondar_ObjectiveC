@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSObject+BPVCategory.h"
+
 extern const uint8_t kBPVChildrenCount;
 
 typedef enum {

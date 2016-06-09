@@ -11,6 +11,7 @@
 		2D7E0DAF1D06D4F900620461 /* BPVCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E0DAE1D06D4F900620461 /* BPVCreature.m */; };
 		2D7E0DB21D08975700620461 /* BPVCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E0DB11D08975700620461 /* BPVCreatureFemale.m */; };
 		2D7E0DB51D08976D00620461 /* BPVCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E0DB41D08976D00620461 /* BPVCreatureMale.m */; };
+		2D7E0DB81D094F0E00620461 /* NSObject+BPVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E0DB71D094F0E00620461 /* NSObject+BPVCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		2D7E0DB11D08975700620461 /* BPVCreatureFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPVCreatureFemale.m; sourceTree = "<group>"; };
 		2D7E0DB31D08976D00620461 /* BPVCreatureMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPVCreatureMale.h; sourceTree = "<group>"; };
 		2D7E0DB41D08976D00620461 /* BPVCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPVCreatureMale.m; sourceTree = "<group>"; };
+		2D7E0DB61D094F0E00620461 /* NSObject+BPVCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BPVCategory.h"; sourceTree = "<group>"; };
+		2D7E0DB71D094F0E00620461 /* NSObject+BPVCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BPVCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 		2D7E0DA61D05C11300620461 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2D7E0DB61D094F0E00620461 /* NSObject+BPVCategory.h */,
+				2D7E0DB71D094F0E00620461 /* NSObject+BPVCategory.m */,
 				2D7E0DB01D08975700620461 /* BPVCreatureFemale.h */,
 				2D7E0DB11D08975700620461 /* BPVCreatureFemale.m */,
 				2D7E0DB31D08976D00620461 /* BPVCreatureMale.h */,
@@ -143,6 +148,7 @@
 			files = (
 				2D7E0D9D1D05B5F000620461 /* main.m in Sources */,
 				2D7E0DB21D08975700620461 /* BPVCreatureFemale.m in Sources */,
+				2D7E0DB81D094F0E00620461 /* NSObject+BPVCategory.m in Sources */,
 				2D7E0DB51D08976D00620461 /* BPVCreatureMale.m in Sources */,
 				2D7E0DAF1D06D4F900620461 /* BPVCreature.m in Sources */,
 			);

@@ -8,17 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSObject+BPVCategory.h"
+
 #import "BPVCreature.h"
 #import "BPVCreatureMale.h"
 #import "BPVCreatureFemale.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        BPVCreatureMale *creature1 = [[[BPVCreatureMale alloc] init] autorelease];
-        BPVCreatureFemale *creature2 = [[[BPVCreatureFemale alloc] init] autorelease];
-        BPVCreatureMale *creature3 = [[[BPVCreatureMale alloc] init] autorelease];
-        BPVCreatureFemale *creature4 = [[[BPVCreatureFemale alloc] init] autorelease];
-        BPVCreatureMale *creature5 = [[[BPVCreatureMale alloc] init] autorelease];
+        BPVCreatureMale *creature1 = [BPVCreatureMale object];
+        BPVCreatureFemale *creature2 = [BPVCreatureFemale object];
+        BPVCreatureMale *creature3 = [BPVCreatureMale object];
+        BPVCreatureFemale *creature4 = [BPVCreatureFemale object];
+        BPVCreatureMale *creature5 = [BPVCreatureMale object];
         
         creature1.name = @"Alex";
         creature2.name = @"Alexandra";
@@ -30,7 +32,9 @@ int main(int argc, const char * argv[]) {
         
         for (BPVCreature *creature in creatures) {
             if ([creature respondsToSelector: @selector(giveBirthToChild)]) {
-                [[(BPVCreatureFemale *)creature addChild: [(BPVCreatureFemale *)creature giveBirthToChild]] setName: @"child"];
+                [[(BPVCreatureFemale *)creature
+                  addChild: [(BPVCreatureFemale *)creature
+                             giveBirthToChild]] setName: @"child"];
             }
             
             [creature sayHi];

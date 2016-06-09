@@ -22,7 +22,7 @@
 {
     self = [super init];
     self.gender = BPVCreatureGenderTypeFemale;
-    self.mutableChildren = [[[NSMutableArray alloc] init] autorelease];
+    self.mutableChildren = [NSMutableArray object];
     
     return self;
 }
@@ -64,7 +64,7 @@
 - (BPVCreature *)giveBirthToChild {
     NSLog(@"Child was born!");
     
-    return [[BPVCreature new] autorelease];
+    return [BPVCreature object];
 }
 
 - (void)performGenderSpecificOperation {
