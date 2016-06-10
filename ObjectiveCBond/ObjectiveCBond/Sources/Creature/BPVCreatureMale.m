@@ -10,20 +10,6 @@
 
 @implementation BPVCreatureMale
 
-- (instancetype)init
-{
-    self = [super init];
-    self.gender = BPVCreatureGenderTypeMale;
-    
-    return self;
-}
-
-- (void)dealloc {
-    self.name = nil;
-    
-    [super dealloc];
-}
-
 - (void)fight {
     NSLog(@"%@ go to fight.", self.name);
 }

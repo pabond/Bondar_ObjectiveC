@@ -8,35 +8,39 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSObject+BPVCategory.h"
-
 #import "BPVCreature.h"
 #import "BPVCreatureMale.h"
 #import "BPVCreatureFemale.h"
 
+#import "NSObject+BPVExtensions.h"
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        NSMutableArray *creatures = [NSMutableArray object];
+        
         BPVCreatureMale *creature1 = [BPVCreatureMale object];
-        BPVCreatureFemale *creature2 = [BPVCreatureFemale object];
-        BPVCreatureMale *creature3 = [BPVCreatureMale object];
-        BPVCreatureFemale *creature4 = [BPVCreatureFemale object];
-        BPVCreatureMale *creature5 = [BPVCreatureMale object];
-        
         creature1.name = @"Alex";
-        creature2.name = @"Alexandra";
-        creature3.name = @"Paul";
-        creature4.name = @"Irene";
-        creature5.name = @"Bob";
+        [creatures addObject: creature1];
         
-        NSArray *creatures = [NSArray arrayWithObjects: creature1, creature2, creature3, creature4, creature5, nil];
+        BPVCreatureMale *creature2 = [BPVCreatureMale object];
+        creature2.name = @"Paul";
+        [creatures addObject: creature2];
+        
+        BPVCreatureMale *creature3 = [BPVCreatureMale object];
+        creature3.name = @"Bob";
+        [creatures addObject: creature3];
+        
+        BPVCreatureFemale *creature4 = [BPVCreatureFemale object];
+        creature4.name = @"Irene";
+        [creatures addObject: creature4];
+        
+        BPVCreatureFemale *creature5 = [BPVCreatureFemale object];
+        creature5.name = @"Alexandra";
+        [creatures addObject: creature5];
+        
+        NSLog(@"creatures = %@", creatures);
         
         for (BPVCreature *creature in creatures) {
-            if ([creature respondsToSelector: @selector(giveBirthToChild)]) {
-                [[(BPVCreatureFemale *)creature
-                  addChild: [(BPVCreatureFemale *)creature
-                             giveBirthToChild]] setName: @"child"];
-            }
-            
             [creature sayHi];
             [creature performGenderSpecificOperation];
         }
