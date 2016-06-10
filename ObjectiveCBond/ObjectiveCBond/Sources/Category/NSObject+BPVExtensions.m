@@ -1,14 +1,14 @@
 //
-//  NSObject+BPVCategory.m
+//  NSObject+BPVExtensions.m
 //  ObjectiveCBond
 //
-//  Created by Bondar Pavel on 6/9/16.
+//  Created by Bondar Pavel on 6/10/16.
 //  Copyright © 2016 Pavel Bondar. All rights reserved.
 //
 
-#import "NSObject+BPVCategory.h"
+#import "NSObject+BPVExtensions.h"
 
-@implementation NSObject (BPVCategory)
+@implementation NSObject (BPVExtensions)
 
 + (id)object {
     return [[[self alloc] init] autorelease];

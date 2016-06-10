@@ -8,6 +8,8 @@
 
 #import "BPVCreatureFemale.h"
 
+#import "NSObject+BPVExtensions.h"
+
 @interface BPVCreatureFemale ()
 
 @property (nonatomic, retain) NSMutableArray *mutableChildren;
@@ -18,57 +20,51 @@
 
 @dynamic children;
 
-- (instancetype)init
-{
-    self = [super init];
-    self.gender = BPVCreatureGenderTypeFemale;
-    self.mutableChildren = [NSMutableArray object];
-    
-    return self;
-}
-
 - (void)dealloc {
-    self.name = nil;
     self.mutableChildren = nil;
     
     [super dealloc];
+}
+
+- (instancetype)init {
+    self = [super init];
+    self.mutableChildren = [NSMutableArray object];
+    
+    return self;
 }
 
 - (NSArray *)children {
     return [[self.mutableChildren copy] autorelease];
 }
 
-- (BPVCreature *)addChild: (BPVCreature *)child {
-    if (!child) {
-        return nil;
+- (void)addChild:(BPVCreature *)child {
+    if (child) {
+        [self.mutableChildren addObject:child];
     }
-    
-    [self.mutableChildren addObject: child];
-    
-    return child;
 }
 
-- (void)removeChild: (BPVCreature *)child {
-    [self.children[0] removeObject: child];
-}
-
-
-- (BPVCreature *)giveBirthToChildWithName: (NSString *)name {
-    BPVCreature *child = [self giveBirthToChild];
-    [child setName: name];
-    NSLog(@"Babys name is %@", name);
-    
-    return child;
+- (void)removeChild:(BPVCreature *)child {
+    [self.mutableChildren removeObject:child];
 }
 
 - (BPVCreature *)giveBirthToChild {
+    BPVCreature *child = [BPVCreature object];
+    [self.mutableChildren addObject:child];
     NSLog(@"Child was born!");
     
-    return [BPVCreature object];
+    return child;
+}
+
+- (BPVCreature *)giveBirthToChildWithName:(NSString *)name {
+    BPVCreature *child = [BPVCreature object];
+    [child setName:name];
+    
+    return child;
 }
 
 - (void)performGenderSpecificOperation {
-    [self giveBirthToChild];
+    BPVCreature *child = [self giveBirthToChildWithName:@"baby"];
+    [child sayHi];
 }
 
 @end

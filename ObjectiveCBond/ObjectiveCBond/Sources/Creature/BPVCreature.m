@@ -8,9 +8,13 @@
 
 #import "BPVCreature.h"
 
-const uint8_t kBPVChildrenCount = 3;
-
 @implementation BPVCreature
+
+- (void)dealloc {
+    self.name = nil;
+    
+    [super dealloc];
+}
 
 - (void)sayHi {
     NSLog(@"Creature %@ says HI!", self.name);

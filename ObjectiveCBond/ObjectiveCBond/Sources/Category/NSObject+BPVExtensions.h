@@ -1,14 +1,14 @@
 //
-//  NSObject+BPVCategory.h
+//  NSObject+BPVExtensions.h
 //  ObjectiveCBond
 //
-//  Created by Bondar Pavel on 6/9/16.
+//  Created by Bondar Pavel on 6/10/16.
 //  Copyright © 2016 Pavel Bondar. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (BPVCategory)
+@interface NSObject (BPVExtensions)
 
 + (id)object;
 

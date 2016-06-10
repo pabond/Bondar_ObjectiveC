@@ -10,6 +10,6 @@
 
 @interface BPVCreatureMale : BPVCreature
 
-@property (nonatomic, assign, readwrite) BPVCreatureGenderType gender;
+- (void)fight;
 
 @end
